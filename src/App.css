@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+}
+.logo:hover {
+  filter: none;
+}
+.logo.react:hover {
+  filter: none;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Modal de autenticación (mostrar al pulsar Buscar si no está autenticado) */
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,0.45);
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.auth-modal-card {
+    background: #fff;
+    color: #222;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    transform: none;
+}
+
+.auth-modal-card h2 { margin: 0 0 0.5rem; font-size: 1.2rem; }
+.auth-modal-card p { color: #555; margin: 0 0 1rem; font-size: 0.95rem; }
+
+.auth-modal-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.auth-modal .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.auth-modal-close {
+    background: transparent;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* Ajustes para botón de búsqueda si hace falta */
+.btn-search {
+    background: linear-gradient(135deg, #1f6feb, #6b46c1);
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}

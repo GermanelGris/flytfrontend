@@ -1,0 +1,280 @@
+/* Reset y configuración base 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+}*/
+
+/* Sección principal */
+.section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título */
+.mb-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla mejorada */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Encabezado de la tabla */
+.table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.table thead th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Cuerpo de la tabla */
+.table tbody tr {
+    border-bottom: 1px solid #e8eef5;
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(102, 126, 234, 0.05);
+    box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.1);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody td {
+    padding: 1.25rem 1.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilos específicos de celdas */
+.table tbody td:first-child {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.table tbody td:nth-child(3) {
+    color: #2ed573;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.table tbody td:nth-child(4) {
+    background: rgba(102, 126, 234, 0.08);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Responsividad para tablas */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 1rem;
+    }
+
+    .table thead th {
+        font-size: 0.9rem;
+    }
+
+    .mb-4 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Botón de exportar */
+.btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ed573 0%, #1dd1a1 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(46, 213, 115, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(46, 213, 115, 0.4);
+}
+
+.btn-success:active {
+    transform: translateY(-1px);
+}
+
+/* Botón de volver */
+.btn-back {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-back:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.btn-back:active {
+    transform: translateY(-1px);
+}
+
+/* Grupo de botones */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+}
+
+/* Estilos adicionales para mejorar la experiencia */
+.table-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Badges de disponibilidad */
+.stock-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    min-width: 100px;
+}
+
+.stock-badge.high {
+    background: linear-gradient(135deg, #2ed573 0%, #1dd1a1 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 213, 115, 0.3);
+}
+
+.stock-badge.medium {
+    background: linear-gradient(135deg, #ffa502 0%, #ff8c42 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 165, 2, 0.3);
+}
+
+.stock-badge.low {
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b7a 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Scrollable en dispositivos pequeños */
+@media (max-width: 480px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+        display: block;
+    }
+
+    .table thead {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid #e8eef5;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .table tbody td {
+        padding-left: 50%;
+        position: relative;
+        border: none;
+    }
+
+    .table tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: 700;
+        color: #667eea;
+    }
+}
+
