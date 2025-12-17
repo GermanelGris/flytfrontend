@@ -26,7 +26,6 @@ const FlightList = () => {
                 }
 
                 const data = await response.json();
-                console.log('Datos de la API:', data); // Debug
                 
                 // Mapear los datos de la API al formato que espera FlightCard
                 const mappedFlights = Array.isArray(data) ? data.map(vp => {
@@ -65,7 +64,6 @@ const FlightList = () => {
                 setFilteredFlights(mappedFlights);
                 setError(null);
             } catch (err) {
-                console.error('Error cargando vuelos:', err);
                 setError(err.message || 'Error al cargar los vuelos');
             } finally {
                 setLoading(false);

@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import { act } from 'react';
 import '@testing-library/jest-dom';
 import { describe, it, expect, beforeEach, vi } from 'vitest'; 
+import { MemoryRouter } from 'react-router-dom';
 import ProductSearch from '../ProductSearch';
 
 
@@ -23,9 +25,15 @@ import ProductSearch from '../ProductSearch';
 
 describe('Componente ProductSearch', () => {
 it('Debe mostrar una alerta si Origen y Destino están vacíos', () => {
-        render(<ProductSearch />);
+        render(
+            <MemoryRouter>
+                <ProductSearch />
+            </MemoryRouter>
+        );
         
-        fireEvent.click(screen.getByRole('button', { name: /Buscar Vuelos/i }));
+        act(() => {
+            fireEvent.click(screen.getByRole('button', { name: /Buscar Vuelos/i }));
+        });
         
         expect(global.alert).toHaveBeenCalledTimes(1);
         expect(global.alert).toHaveBeenCalledWith(

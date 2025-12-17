@@ -12,10 +12,12 @@ import './CSS/login.css'
 import './CSS/vuelos.css'
 import './CSS/datatable.css'
 import './CSS/chartsection.css'
+import './CSS/flightadmin.css'
 import DataTable from './components/DataTable.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import HeaderLog from './components/HeaderLog.jsx'
 import Contact from './components/Contact.jsx'
+import FlightAdmin from './components/FlightAdmin.jsx'
 
 function App() {
    return (
@@ -56,6 +58,7 @@ function App() {
           <>
             <ProtectedRoute>
             <HeaderLog/>
+            <Navbar/>
             <DataTable/>
             </ProtectedRoute>
           </>
@@ -65,6 +68,7 @@ function App() {
           <>
             <ProtectedRoute>
               <HeaderLog/>
+              <Navbar/>
             <ChartSection/>
             </ProtectedRoute>
           </>
@@ -74,7 +78,18 @@ function App() {
           <>
             <ProtectedRoute>
               <HeaderLog/>
+              <Navbar/>
               <Contact/>
+            </ProtectedRoute>
+          </>
+
+        }/>
+        <Route path="/admin-vuelos" element={
+          <>
+            <ProtectedRoute>
+              <HeaderLog/>
+              <Navbar/>
+              <FlightAdmin/>
             </ProtectedRoute>
           </>
 

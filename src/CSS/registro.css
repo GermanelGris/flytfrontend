@@ -165,9 +165,9 @@ body {
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-    width: min(100%, 880px);      /* garantiza que no exceda el viewport */
+    width: min(100%, 880px);
     max-width: 880px;
-    margin: 0 auto;               /* CENTRADO */
+    margin: 0 auto;
     box-sizing: border-box;
     border: 1px solid rgba(0,0,0,0.04);
 }
@@ -191,6 +191,23 @@ body {
 .form-header p {
     color: #666;
     font-size: 1.1rem;
+}
+
+/* Form Step */
+.form-step {
+    width: 100%;
+}
+
+.form-step h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -350,6 +367,11 @@ body {
 
     .header-content {
         padding: 0 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .register-container {

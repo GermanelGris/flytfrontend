@@ -21,7 +21,7 @@ const SearchForm = ({ isAuthenticated = false }) => {
         const data = await respuesta.json();
         setLugaresTuristicos(data);
       } catch (error) {
-        console.error('Error al cargar los lugares turísticos:', error);
+        // Silently handle error
       }
     };
     cargarLugaresTuristicos();

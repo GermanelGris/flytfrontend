@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-DOM'; // FIX
+import { useNavigate } from 'react-router-DOM';
 import '../CSS/Contact.css';
 
 const Contact = () => {
@@ -26,8 +26,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    console.log('TOKEN:', localStorage.getItem('token')); // diagnostico
-    const loadContact = async () => {
+    const loadContacts = async () => {
       try {
         setLoading(true);
         const res = await fetch('http://localhost:8090/api/clientes/me', { headers: authHeaders() });
@@ -58,7 +57,7 @@ const Contact = () => {
         setLoading(false);
       }
     };
-    loadContact();
+    loadContacts();
   }, []);
 
   const handleChange = (e) => {
